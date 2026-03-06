@@ -3,7 +3,8 @@
 
 def help [] {
   print (['gh_issues.nu usage:',
-          '  nu gh_issues.nu owner/repo [--state <open|closed|all>] [--limit <n>] [--outdir <dir>]',
+          '  gh-issues owner/repo [--state <open|closed|all>] [--limit <n>] [--outdir <dir>]',
+          '  (or) nu gh_issues.nu owner/repo [--state <open|closed|all>] [--limit <n>] [--outdir <dir>]',
           'Options: --state (default open) --limit (default 200) --outdir (default repo name)',
           'Requires: gh auth login'] | str join (char nl))
 }

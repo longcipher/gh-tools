@@ -2,11 +2,39 @@
 
 github tools based on gh cli
 
+## Install (macOS)
+
+Install `gh-issues` command:
+
+```bash
+cd gh-tools
+./install.sh
+```
+
+If `/usr/local/bin` is not writable, installer uses `~/.local/bin`.
+You can also choose your own install path:
+
+```bash
+./install.sh --prefix "$HOME/bin"
+```
+
+After install, run directly:
+
+```bash
+gh-issues owner/repo --state all --limit 50
+```
+
 ## gh_issues.nu
 
 Export issues (with comments) of a repository to local markdown files.
 
 Usage:
+
+```bash
+gh-issues owner/repo [--state open|closed|all] [--limit N] [--outdir DIR]
+```
+
+Or run without installation:
 
 ```bash
 nu gh_issues.nu owner/repo [--state open|closed|all] [--limit N] [--outdir DIR]
